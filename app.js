@@ -41,7 +41,7 @@ app.get('/', function(req, res, next) {
     let topic = '/' + req.query.topic;
     let payload = req.query.payload;
     publishData(topic, payload);
-    res.send(`Published ${pin} to ${topic}`);
+    res.send(`Published ${payload} to ${topic}`);
 })
 
 app.listen(port, () => {
